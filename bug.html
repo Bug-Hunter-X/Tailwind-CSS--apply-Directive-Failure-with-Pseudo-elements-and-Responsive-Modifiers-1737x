@@ -1,0 +1,7 @@
+This bug occurs when using Tailwind CSS's `@apply` directive with a class that contains a pseudo-element (like `::before` or `::after`) within a responsive modifier class.  For example, this code will fail to apply the styles correctly:
+
+```html
+<div class="md:hover:\:before:bg-red-500"></div>
+```
+
+Tailwind will interpret this as an invalid class name because the `::before` pseudo-element is treated differently. It's not a regular class.
