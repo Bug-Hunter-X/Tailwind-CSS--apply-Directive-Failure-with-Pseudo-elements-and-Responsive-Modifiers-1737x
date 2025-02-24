@@ -1,0 +1,7 @@
+To fix this, apply the pseudo-element styles separately from the responsive modifier:
+
+```html
+<div class="md:hover:relative before:bg-red-500 before:absolute before:top-0 before:left-0 before:w-4 before:h-4"></div>
+```
+
+This approach ensures that the pseudo-element styles are applied correctly without conflicting with the responsive modifier.  You may need to adjust the absolute positioning and dimensions according to your specific design.
